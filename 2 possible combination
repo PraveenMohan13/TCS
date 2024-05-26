@@ -133,4 +133,76 @@ def main():
   ans = fun(N, M, P, E)
   print(ans)
 main()
+=====================================================================================================================
+int factorial(int n) 
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    return fact;
+}
+int countWaysToChoose(int N, int M, int P, int E) 
+{
+    int waysToChoosePencils = factorial(N) / (factorial(P) * factorial(N - P));
+    int waysToChooseErasers = factorial(M) / (factorial(E) * factorial(M - E));
+    int totalWays = waysToChoosePencils * waysToChooseErasers;
+
+    return totalWays;
+}
+=================================================================================================================
+int factorial(int n) 
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++) 
+    {
+        fact *= i;
+    }
+    return fact;
+}
+// Function to calculate the number of ways to choose 'P' pencils and 'E' erasers
+int countWaysToChoose(int N, int M, int P, int E) 
+{
+    // Calculate the number of ways to choose 'P' pencils
+    int waysToChoosePencils = factorial(N) / (factorial(P) * factorial(N - P));
+
+    // Calculate the number of ways to choose 'E' erasers
+    int waysToChooseErasers = factorial(M) / (factorial(E) * factorial(M - E));
+
+    // Calculate the total number of ways
+    int totalWays = waysToChoosePencils * waysToChooseErasers;
+
+    return totalWays;
+}
+=================================================================================================================================
+public class Main 
+{
+    // Function to calculate the factorial of a number
+    public static int factorial(int n) 
+    {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) 
+        {
+            fact *= i;
+        }
+        return fact;
+    }
+    // Function to calculate the number of ways to choose 'P' pencils and 'E' erasers
+    public static int countWaysToChoose(int N, int M, int P, int E) 
+    {
+        // Calculate the number of ways to choose 'P' pencils
+        int waysToChoosePencils = factorial(N) / (factorial(P) * factorial(N - P));
+
+        // Calculate the number of ways to choose 'E' erasers
+       int waysToChooseErasers = factorial(M) / (factorial(E) * factorial(M - E));
+
+        // Calculate the total number of ways
+        int totalWays = waysToChoosePencils * waysToChooseErasers;
+
+        return totalWays;
+    }
+===============================================================================================
+
+
 
