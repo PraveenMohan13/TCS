@@ -38,3 +38,42 @@ if(b<0):
   print("NO")
 else:
   print("YES")
+========================================================================
+import java.util.Scanner;
+import java.util.Arrays; 
+class Main{
+  public static void main(String args[])  {
+    Scanner sc = new Scanner(System.in);
+    long b;
+    b = sc.nextLong();
+    int n = sc.nextInt();
+    long z[]= new long[n];
+    for(int i=0;i<n;i++)
+        z[i]=sc.nextLong();
+    Arrays.sort(z);
+    for(int i=0;i<n;i++)
+       b-=(z[i]%2)+(z[i]/2);
+    if(b<0)
+        System.out.print("NO");
+    else
+        System.out.print("YES");
+  }
+}
+=================================================================
+#include <algorithm>
+ #include<iostream>
+using namespace std;
+int main(){
+    long int b,n;
+    cin>>b>>n;
+    long int z[n];
+    for(long int i=0;i<n;i++)
+        cin>>z[i];
+    sort(z, z+n);
+    for(long int i=0;i<n;i++)
+       b-=(z[i]%2)+(z[i]/2);
+    if(b<0)
+        cout<<"NO";
+    else
+        cout<<"YES";
+}
