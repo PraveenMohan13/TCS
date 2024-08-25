@@ -1,0 +1,40 @@
+public class Main {
+    static void sort(int a[])
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                if(a[i]<a[j])
+                {
+                    int t = a[i];
+                    a[i] = a[j];
+                    a[j] = t;
+                }
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner z =new Scanner(System.in);
+        int n =z.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+            a[i]=z.nextInt();
+        int k = z.nextInt();
+        int c = 0;
+        while(true)
+        {
+            sort(a);
+            if(a[k-1]==0)
+            {
+                System.out.print(c);
+                return;
+            }
+            for(int i=0;i<k;i++)
+                a[i]--;
+            c++;
+                
+        }
+        
+    }
+}
